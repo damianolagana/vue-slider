@@ -38,6 +38,14 @@ createApp({
             if(this.activeImage<0){
                 this.activeImage = this.slides.length-1;
             }
+        },
+        nextSlide(){
+            this.activeImage++;
+            console.log(this.activeImage);
+            if(this.activeImage== this.slides.length){
+                this.activeImage = 0;
+            }
+            
         }
     }
 }).mount('#app')
