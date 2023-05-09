@@ -33,7 +33,7 @@
                     
                     
                     <div v-for="(anteprima,i) in slides" :class="getClass(i)">
-                        <img :src="slides[i].image" alt="">
+                        <img :src="slides[i].image" :alt="slides[i].title">
                     </div>
 
 
