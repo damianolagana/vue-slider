@@ -31,9 +31,16 @@
                     <div @click="prevSlide()" class="prev"></div>
                     <div @click="nextSlide()" class="next"></div>
                     
-                    <div v-for="(anteprima,i) in slides" :class="(activeImage==i) ? 'thumb active' : 'thumb'">
+                    
+                    <div v-for="(anteprima,i) in slides" :class="getClass(i)">
                         <img :src="slides[i].image" alt="">
                     </div>
+
+
+                    <!-- METODO ALTERNATIVO -->
+                    <!-- <div v-for="(anteprima,i) in slides" :class="(activeImage==i) ? 'thumb active' : 'thumb'">
+                        <img :src="slides[i].image" alt="">
+                    </div> -->
                     
                     
                     <!-- <div class="thumb active">

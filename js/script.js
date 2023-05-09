@@ -46,6 +46,14 @@ createApp({
                 this.activeImage = 0;
             }
             
+        },
+        getClass(i){
+            let classes="thumb";
+            if(this.activeImage==i){
+                classes += " active";
+            }
+
+            return classes;
         }
     }
 }).mount('#app')
