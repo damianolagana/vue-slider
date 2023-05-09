@@ -5,6 +5,7 @@ const {
 createApp({
     data() {
       return {
+        activeImage : "0",
         slides : [
             {
                 image: 'img/01.webp',
@@ -29,6 +30,15 @@ createApp({
             }
         ]
       }
+    },
+    methods : {
+        prevSlide(){
+            this.activeImage--;
+            console.log(this.activeImage);
+            if(this.activeImage<0){
+                this.activeImage = this.slides.length-1;
+            }
+        }
     }
 }).mount('#app')
 
